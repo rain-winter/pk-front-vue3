@@ -1,3 +1,3 @@
 <template>
-  <div class="text-3xl text-red-500">首页</div>
+  <p class="text-blue-600">The quick brown fox...</p>
 </template>

@@ -14,8 +14,8 @@ export default defineConfig({
     VueRouter({
       /* options */
     }),
-    UnoCSS(),
     vue(),
+    UnoCSS(),
     vueJsx(),
     VueDevTools()
     // Pages({
