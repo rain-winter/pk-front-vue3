@@ -1,3 +1,4 @@
+<script setup lang="ts"></script>
 <template>
-  <p class="text-blue-600">The quick brown fox...</p>
+  <div>home</div>
 </template>
