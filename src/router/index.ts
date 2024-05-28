@@ -5,7 +5,15 @@ import { setupLayouts } from 'virtual:generated-layouts'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  extendRoutes: (routes) => setupLayouts(routes)
+  extendRoutes: (routes) => {
+    return [
+      ...setupLayouts(routes),
+      {
+        path: '/fssd/sdsd',
+        component: () => import('@/pages/about.vue')
+      }
+    ]
+  }
 })
 
 // 重定向方案

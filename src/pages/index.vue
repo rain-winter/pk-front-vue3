@@ -1,4 +1,4 @@
 <script setup lang="ts"></script>
 <template>
-  <div>home</div>
+  <div>rr</div>
 </template>
