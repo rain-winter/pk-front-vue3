@@ -34,10 +34,13 @@ export default defineConfig({
         })
       ]
     }),
-    Layouts({
-      layoutsDirs: 'src/layouts',
-      defaultLayout: 'default'
-    }),
+    Layouts(),
+    // {
+    //   layoutsDirs: 'src/layouts',
+    //   pagesDirs: 'src/pages',
+    //   defaultLayout: 'default'
+    // }
+
     AutoImport({
       /* options */
       // targets to transform
