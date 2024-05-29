@@ -1,8 +1,8 @@
 <script setup lang="ts"></script>
 <template>
-  <div>
+  <div class="d-flex">
     <router-link
-      class="item router-link"
+      class="item"
       to="/"
     >
       产品
@@ -31,7 +31,15 @@
 <style scoped lang="scss">
 // 如果直接写样式，不会被压缩
 // 方案1 使用unocss的transformers
-.itemd {
-  @apply text-center text-xl py-2 px-4 cursor-pointer;
+.item {
+  @apply relative  text-center text-xl px-8 py-5 cursor-pointer font-300;
+  &:hover {
+    @apply font-500 shadow-sm;
+    &:after {
+      // content: '';
+      @apply absolute content-none  bg-green-300 w-8 h-1 bottom-0 left-[calc(50%-1rem)];
+      // left: calc(50% - 1rem);
+    }
+  }
 }
 </style>
