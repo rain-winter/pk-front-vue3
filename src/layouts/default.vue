@@ -4,7 +4,7 @@ const { y } = useWindowScroll()
 <template>
   <div
     :class="{ 'bg-black bg-opacity-30': y > 0 }"
-    class="fixed top-0 w-full"
+    class="fixed top-0 w-full z-60"
   >
     <Container>
       <img
@@ -15,7 +15,6 @@ const { y } = useWindowScroll()
       <Menu />
     </Container>
   </div>
-  <div class="h-[1200px]"></div>
   <router-view />
   <div>footer</div>
 </template>
