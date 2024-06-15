@@ -10,6 +10,7 @@ export default defineConfig({
   transformers: [transformerDirectives()],
   // 针对全局组件的样式 class="router-link"
   shortcuts: {
-    'router-link': ' text-xl font-300 cursor-pointer px-8 hover:(text-teal-600)'
+    'router-link': ' text-xl font-300 cursor-pointer px-8 hover:(text-teal-600)',
+    'bg-image': 'w-full h-full bg-center-top bg-no-repeat bg-cover'
   }
 })
