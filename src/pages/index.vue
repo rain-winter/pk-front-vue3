@@ -2,6 +2,9 @@
 import type { SwiperItemType } from '@/components/type'
 import bg from '@/assets/images/bg.png'
 
+import { useThemeStore } from '@/stores/useThemeStore'
+const themeStore = useThemeStore()
+
 const items: SwiperItemType[] = [
   {
     image: bg,
@@ -27,6 +30,10 @@ const items: SwiperItemType[] = [
 </script>
 <template>
   <div>
-    <Swiper :items="items" />
+    <Swiper
+      :items="items"
+      :height="`${themeStore.rate * 36}rem`"
+    />
+    <Card :icon="'i-mdi-home'" />
   </div>
 </template>
