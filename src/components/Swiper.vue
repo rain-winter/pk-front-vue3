@@ -29,7 +29,7 @@ const onSlideChange = () => {}
 const getClassAndStyle = (str: string) => {
   // 如果height的值包含rem em px，则返回 {string: str, class: ''}
   return {
-    styles: /(rem|em|px)/.test(props.height) ? { height: str } : {},
+    style: /(rem|em|px)/.test(props.height) ? { height: str } : {},
     class: /h-/.test(props.height) ? str : ''
   }
 }
@@ -41,6 +41,7 @@ const getClassAndStyle = (str: string) => {
     :slides-per-view="1"
     :space-between="10"
     :class="getClassAndStyle(height).class"
+    :style="getClassAndStyle(props.height).style"
     class="w-full"
     :pagination="{ clickable: true }"
     navigation
