@@ -20,7 +20,8 @@
     ></script>
     <script>
       if (/iPhone|SymbianOS|Windows Phone|iPad|Android/i.test(navigator.userAgent)) {
-        window.location.href = 'https://m.imooc.com/'
+        // window.location.href = 'https://m.imooc.com/'
+        document.body.classList.add('mobile-device')
       }
       // function setFontSize() {
       //   document.documentElement.style.fontSize =

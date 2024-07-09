@@ -1,6 +1,13 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import type { PropType } from 'vue'
+defineProps({
+  align: {
+    type: String as PropType<'vertical' | 'horizanal'>
+  }
+})
+</script>
 <template>
-  <div class="d-flex">
+  <div :class="['flex', { 'flex-col': align === 'vertical' }]">
     <router-link
       class="item"
       to="/"
@@ -32,7 +39,7 @@
 // 如果直接写样式，不会被压缩
 // 方案1 使用unocss的transformers
 .item {
-  @apply relative  text-center text-xl px-8 py-5 cursor-pointer font-300;
+  @apply relative  text-center text-xl px-8 py-5 cursor-pointer font-300 text-white lt-sm:self-start;
   &:hover {
     @apply font-500 shadow-sm;
     &:after {
