@@ -39,7 +39,9 @@ useResizeObserver(document.body, () => {
   </div>
   <router-view />
   <div>
-    <data class="mobile-hide">default footer</data>
+    <data class="mobile-hide">
+      <DefaultFooter />
+    </data>
     <div class="mobile hidden">mobile-device</div>
   </div>
 </template>
